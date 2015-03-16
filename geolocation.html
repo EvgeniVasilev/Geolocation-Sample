@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Geo Location</title>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBa3sdgoiGxS-j5UYj736IZ4vc3fl8fq-0&sensor=false"></script>
+        <style type="text/css">
+            body {
+                margin: 0;
+            }
+            
+            .header {
+                height: auto;
+                background-color: rgb(34, 34, 34);
+                color: white;
+                margin: auto;
+                color: #737373;
+            }
+            
+            h2 {
+                margin: auto;
+                text-align: center;
+            }
+            
+            p {
+                font-family: Arial, Verdana, sans-serif;
+                color: rgb(34, 34, 34);
+                font-size:14px;
+            }
+            
+            .map {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var scriptLoaderObject;
+            scriptLoaderObject = [
+                "./scripts/main.js"
+            ];
+            
+            function processLoad(loaderObject) {
+                var i, loaderObjectLength = loaderObject.length;
+                for (i = 0; i < loaderObjectLength; i++) {
+                    var newScript = document.createElement("script");
+                    newScript.src = loaderObject[i];
+                    newScript.type = "text/javascript";
+                    document.getElementsByTagName("head")[0].appendChild(newScript);
+                }
+            }
+            
+            processLoad(scriptLoaderObject);
+            
+        </script>
+        <div class="header"><h2>HTML 5 Geo Location API and Google Map API Sample</h2></div>
+        <div class="map" id="googleMap" style="width: 941px;height:400px; margin-top: 20px;"></div>
+        <p id="res"></p>
+        </div>
+    </body>
+</html>
